@@ -1,5 +1,6 @@
 //creating patient model
-import mongoose from "mongoose"; //Imports the Mongoose library. Mongoose handles schema definition, validation, querying, and middleware for MongoDB.
+import mongoose from "mongoose"; //Imports the Mongoose library. Mongoose handles schema definition, 
+// validation, querying, and middleware for MongoDB.
 const patientSchema = mongoose.Schema(
   {
     //defining a new Mongoose schema using mongoose.Schema(). A schema acts like a blueprint for documents in a MongoDB collection.
@@ -47,7 +48,7 @@ const patientSchema = mongoose.Schema(
   }
 );
 const Patient = mongoose.model("Patient", patientSchema); // Create the Patient model
-export default Patient; //
+export default Patient; //export the model for use in other parts of the application
 
 /*Security Note: Storing passwords in plain text is insecure—always hash them (e.g., using pre('save') middleware with bcrypt). 
 Emails and phones being unique help prevent duplicate accounts.*/
